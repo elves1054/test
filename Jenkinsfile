@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('build') {
           steps {
-            sh 'yarn build'
+            sh 'echo "build"'
           }
         }
         stage('push') {
