@@ -1,0 +1,31 @@
+pipeline {
+  agent any
+  stages {
+    stage('build') {
+      parallel {
+        stage('build') {
+          steps {
+            sh 'yarn build'
+          }
+        }
+        stage('push') {
+          steps {
+            sh '''echo
+    "push"'''
+          }
+        }
+        stage('deploy') {
+          steps {
+            sh 'yarn deploy'
+          }
+        }
+      }
+    }
+    stage('done') {
+      steps {
+        sh '''echo
+    "done"'''
+      }
+    }
+  }
+}
