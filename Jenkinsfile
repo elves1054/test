@@ -10,8 +10,7 @@ pipeline {
         }
         stage('push') {
           steps {
-            sh '''echo
-    "push"'''
+            sh 'echo "push"'
           }
         }
         stage('deploy') {
