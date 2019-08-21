@@ -15,15 +15,14 @@ pipeline {
         }
         stage('deploy') {
           steps {
-            sh 'yarn deploy'
+            sh 'ls'
           }
         }
       }
     }
     stage('done') {
       steps {
-        sh '''echo
-    "done"'''
+        sh 'echo "done"'
       }
     }
   }
