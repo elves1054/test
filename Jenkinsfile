@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('build') {
           steps {
-            sh 'echo "build"'
+            sh 'input message: \'Finished using the web site? (Click "Proceed" to continue)\''
           }
         }
         stage('push') {
